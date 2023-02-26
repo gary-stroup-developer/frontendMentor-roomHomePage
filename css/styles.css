@@ -19,81 +19,107 @@
   top: 0;
   display: block;
 }
-.test{
-  position: relative;
+.logo{
+  position: absolute;
   width: 65px;
   height: 35px;
-  float: none;
   top: 15px;
-  display: block;
+  left: 45%;
 }
 
 .slide2, .slide3 {
   display: none;
 }
 
-.topnav.responsive {position: relative;}
+/* .topnav.responsive {position: relative;} */
 .topnav.responsive .icon{display: none;}
 .topnav.responsive .icon-close {
+  color: var(--VeryDarkGray);
   position: absolute;
+  display: block;
   left: 0;
   top: 0;
 }
 
 .topnav.responsive a {
   float: none;
+  position: relative;
   display: block;
+  top: 30px;
   text-align: left;
 }
+
+.s2 {
+  display: flex;
+  margin: 0 auto;
+}
+
 /* ******************************** */
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 850px) {
 
-    .test {
-      width: 65px;
-      height: 35px;
+    .topnav {
+      display: block;
+      width: 100%;
+      top: 10px;
+      left: 5px;
+      margin-left: 25px;
+    }
+
+    .logo {
+      position: relative;
       float: left;
+      left: 0%;
     }
     .s1 {
-      max-width: 100%;
+      flex:2;
     }
   
     .s2 {
-      padding: 2rem;
+      padding: 0.1rem 2rem;
+      flex:1;
     }
     
     .s3 {
       padding-top: 1rem;
-      width: 33%;
+      flex: 33%;
     }
     
     .s4 {
-      padding-top: 1rem;
-      width: 33%;
+      flex: 37%;
     }
     
     .s5 {
       padding-top: 1rem;
-      width: 33%;
+      flex: 30%;
     }
     
     .slide1 {
       max-width: 500px;
     }
     
-  
-    .topnav a {
-        float: left;
-        display: block;
-        text-align: center;
-      }
-      
-      .topnav .options:hover {
-        border-bottom: 2px solid var(--White);
-        padding-bottom: 1rem;
-      }
+    .topnav a:not(:first-child) {
+      color: var(--Black);
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      text-align: center;
+      float: left;
+    }
+    
+    .topnav .options:hover {
+      border-bottom: 2px solid var(--White);
+      padding-bottom: 1rem;
+    }
 
-      .topnav .icon, .topnav .icon-close{
-        display: none;
-      }
+    .topnav a.icon {
+      display: none;
+    }
+
+    .topnav a.icon-close{
+      display: none;
+    }
+
+
   }
