@@ -1,11 +1,21 @@
+window.addEventListener("resize",responsive);
+
+let nav = document.getElementById("myTopnav");
+
+function responsive() {
+  if(window.screen.width >= 850){
+    nav.className = "topnav";
+    document.getElementById("logo").style.display = "block";
+  }
+};
+
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    x.className += " responsive";
-    document.getElementById("test").style.display = "none";
+    nav.className += " responsive";
+    document.getElementById("logo").style.display = "none";
   }
 
-  function closeNav() {
-    var x = document.getElementById("myTopnav");
-    x.className = "topnav";
-    document.getElementById("test").style.display = "block";
-  }
+function closeNav() {
+  var x = document.getElementById("myTopnav");
+  nav.className = "topnav";
+  document.getElementById("logo").style.display = "block";
+}
